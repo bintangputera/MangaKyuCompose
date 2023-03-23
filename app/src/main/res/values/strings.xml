@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">MangaKyu</string>
+
+    <string name="menu_home">Home</string>
+    <string name="menu_search">Search</string>
+    <string name="menu_favorite">Favorite</string>
 </resources>
