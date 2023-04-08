@@ -1,5 +1,6 @@
 package com.bintangpoetra.mangakyu.ui.reusable
 
+import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.*
@@ -15,7 +16,7 @@ import androidx.navigation.compose.currentBackStackEntryAsState
 import com.bintangpoetra.mangakyu.R
 import com.bintangpoetra.mangakyu.ui.navigation.NavigationItem
 import com.bintangpoetra.mangakyu.ui.navigation.ScreenRoute
-import com.bintangpoetra.mangakyu.ui.theme.Grey200
+import com.bintangpoetra.mangakyu.ui.theme.Grey100
 
 @Composable
 fun BottomNavBar(
@@ -27,11 +28,12 @@ fun BottomNavBar(
         shape = RoundedCornerShape(8.dp),
         elevation = 5.dp,
         modifier = modifier
+            .background(color = Color.White)
             .padding(start = 16.dp, end = 16.dp, bottom = 16.dp)
     ) {
         BottomNavigation(
-            backgroundColor = Grey200,
-            contentColor = Grey200
+            backgroundColor = Color.White,
+            contentColor = Color.White
         ) {
             val navBackStackEntry by navController.currentBackStackEntryAsState()
             val currentRoute = navBackStackEntry?.destination?.route
@@ -63,8 +65,8 @@ fun BottomNavBar(
                                 contentDescription = item.title,
                             )
                         },
-                        selectedContentColor = Color(0XFFFFFF0E),
-                        unselectedContentColor = Color.White,
+                        selectedContentColor = Color.Black,
+                        unselectedContentColor = Grey100,
                         label = { Text(text = item.title) },
                         selected = currentRoute == item.screenRoute.route,
                         onClick = {
